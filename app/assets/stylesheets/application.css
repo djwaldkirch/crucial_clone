@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /* adds padding to the top of the body so that the navbar doesn't overlap body text */
+ body { 
+     padding-top: 70px; 
+     
+ }
+
+/* changing navbar color to red */
+.navbar-custom {
+    background-color: #c92e2e;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
