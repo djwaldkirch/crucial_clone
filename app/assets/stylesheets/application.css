@@ -14,6 +14,9 @@
  *= require_self
  */
  
+@import "bootstrap-sprockets";
+@import "bootstrap";
+ 
  /* adds padding to the top of the body so that the navbar doesn't overlap body text */
  body { 
      padding-top: 70px; 
@@ -37,4 +40,24 @@
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
+}
+
+
+/*styling for debug box*/
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
