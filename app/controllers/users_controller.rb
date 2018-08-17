@@ -7,8 +7,9 @@ class UsersController < ApplicationController
     end
     def create
         @user = User.new(user_params)
-        if @user_save
-            #
+        if @user.save
+            flash[:success] = "Welcome to Crucial Music!"
+            redirect_to @user
         else
             render 'new'
         end
