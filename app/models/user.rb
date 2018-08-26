@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :submissions, dependent: :destroy
     #downcase email before saving
     before_save { self.email = email.downcase }
     #this validates the user's name and makes sure it is there i.e. not a bunch of spaces, or nothing at all

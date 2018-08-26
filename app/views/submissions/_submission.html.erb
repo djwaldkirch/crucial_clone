@@ -1,0 +1,11 @@
+<li id="submission-<%= submission.id %>">
+  <%= link_to gravatar_for(submission.user, size: 50), submission.user %>
+  <span class="user"><%= link_to submission.user.name, submission.user %></span>
+  <span class="title">Title: <%= submission.title %></span>
+  <span class="artist">Artist: <%= submission.artist %></span>
+  <span class="genre">Genre: <%= submission.genre %></span>
+  <span class="lyrics">Lyrics: <%= submission.lyrics %></span>
+  <span class="timestamp">
+    Submitted <%= time_ago_in_words(submission.created_at) %> ago.
+  </span>
+</li>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: "Master of Puppets"
+  artist: "Metallica"
+  genre: "Metal"
+  lyrics: "Master! Master!"
+  created_at: <%= 10.minutes.ago %>
+
+two:
+  title: "Angel of Death"
+  artist: "Slayer"
+  genre: "Metal"
+  lyrics: "Slow death, immense decay!"
+  created_at: <%= 3.years.ago %>
+  
+three:
+  title: "The Marshall Arts"
+  artist: "Razor"
+  genre: "Metal"
+  lyrics: "Aeeeeeeeeegggghhhhhhh!"
+  created_at: <%= 2.hours.ago %>
+  
+most_recent:
+  title: "One by One"
+  artist: "Immortal"
+  genre: "Black Metal"
+  lyrics: "The Northern kings of dark!"
+  created_at: <%= Time.zone.now %>

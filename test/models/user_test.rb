@@ -88,4 +88,12 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+  
+  test "associated submissions should be destroyed" do
+    @user.save
+    @user.submissions.create!(title: "Reign in Blood", artist: "Slayer", genre: "Metal", lyrics: "Dun dun Dun")
+    assert_difference 'Submission.count', -1 do
+      @user.destroy
+    end
+  end
 end
