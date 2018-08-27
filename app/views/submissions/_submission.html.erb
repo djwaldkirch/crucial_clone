@@ -7,5 +7,10 @@
   <span class="lyrics">Lyrics: <%= submission.lyrics %></span>
   <span class="timestamp">
     Submitted <%= time_ago_in_words(submission.created_at) %> ago.
+    <% if current_user?(submission.user) %>
+      <%= link_to "Delete", submission, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
   </span>
+  
 </li>

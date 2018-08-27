@@ -1,3 +1,5 @@
+#this is the controller that controls everything that happens on the site. if you want something to happen no matter where you are, you put it here
+
 class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
     include SessionsHelper
