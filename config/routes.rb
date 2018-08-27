@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users
-  resources :submissions, only: [:create, :destroy]
+  resources :submissions
+  #resources :submissions, only: [:new, :create, :destroy]
 end
