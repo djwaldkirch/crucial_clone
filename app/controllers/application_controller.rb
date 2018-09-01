@@ -1,7 +1,9 @@
 #this is the controller that controls everything that happens on the site. if you want something to happen no matter where you are, you put it here
 
 class ApplicationController < ActionController::Base
+    #this is included by default for application controllers but essentially it protects you from certain attacks.
     protect_from_forgery with: :exception
+    #there's a lot of important stuff in the sessions helper file. extends all of those methods for use here, and by extension every controller in the app
     include SessionsHelper
     
     #private means this method is only accessible internally. it's basically a helper file within the class itself. you could not call logged_in_user from elsewhere

@@ -5,6 +5,8 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <br></br>
+        <p><%= link_to "Submit a Song", new_submission_path, class: "btn btn-lg btn-danger profilesubmit" %></p>
       </h1>
     </section>
   </aside>
