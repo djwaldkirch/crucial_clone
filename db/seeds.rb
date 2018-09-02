@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
+User.create!(name:  "Dan Waldkirch",
+             email: "dan@example.com",
+             password:              "crucial",
+             password_confirmation: "crucial",
              admin: true)
 
 99.times do |n|
