@@ -33,7 +33,6 @@ class SubmissionsController < ApplicationController
   
   #this gets the new view and creates an empty submission in the variable @submission
   def new
-    @title = "Crucial Music | New Submission"
     @submission = current_user.submissions.build
   end
   

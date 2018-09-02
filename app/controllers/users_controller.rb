@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    
     #defined in application controller, allows these actions only if you are logged in
     before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
     #this is potentially confusing! the submissions controller has its own correct_user method defined under private (below).

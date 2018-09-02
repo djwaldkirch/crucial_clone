@@ -3,5 +3,9 @@
   <p id="subheadline">The best independent music. Carefully crafted, crucially culled.</p>
   <%= image_tag "music1.png", :class => "musicimage" %>
   <p>Make music. Get heard. Make money. That’s the mantra. Say it three times, then click here for a crucial opportunity to break your sound and get paid for your talent.</p>
-  <p class="text-center"><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-danger" %></p>
+  <% if logged_in? %>
+    <p class="text-center"><%= link_to "Submit a Song", new_submission_path, class: "btn btn-lg btn-danger" %></p>
+  <% else %>
+    <p class="text-center"><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-danger" %></p>
+  <% end %>
 </div>
